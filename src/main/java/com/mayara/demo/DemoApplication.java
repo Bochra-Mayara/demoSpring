@@ -9,16 +9,12 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		var ctx = SpringApplication.run(DemoApplication.class, args);
-		MyFirstClass myFirstClass = ctx.getBean(MyFirstClass.class);
+		MyFirstClass myFirstClass = ctx.getBean("myFirstClass",MyFirstClass.class);
 		System.out.println(myFirstClass.sayHello());
 
 
 	}
-	//@Bean
-	public MyFirstClass myFirstClass(){
-		return new MyFirstClass();
 
-	}
 
 
 }
